@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1cd2cdd01b73785f957291a1a7eddcf7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1cd2cdd01b73785f957291a1a7eddcf7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1cd2cdd01b73785f957291a1a7eddcf7 = L.map(
+                "map_1cd2cdd01b73785f957291a1a7eddcf7",
+                {
+                    center: [25.7617, -80.1918],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e4641e597974aa548681a14fd2a4a080 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var heat_map_2df203a94f8bae206447480b967e33e3 = L.heatLayer(
+                [[25.810276744186048, -80.22124069767442, 8513], [25.776784444444445, -80.2826838888889, 3228], [25.760297946629464, -80.19903707477297, 9697], [25.768683336873497, -80.18897356399118, 54158], [25.789575, -80.19391375000001, 558], [25.72943407894737, -80.24191614035087, 47611], [25.758185542168675, -80.24064469879518, 13349], [25.753606944444446, -80.22384083333333, 14620], [25.81347664955032, -80.19300839119678, 47217], [25.748773142857143, -80.25193057142857, 7014], [25.774478, -80.18666800000001, 760], [25.768778490415958, -80.20967379987165, 23764], [25.84445, -80.21247, 325], [25.76818, -80.13738, 0], [25.78275077873455, -80.25736982623597, 14270], [25.79932714285714, -80.23658371428571, 8094], [25.82934373333333, -80.19852226666667, 14216], [25.766221547447593, -80.2198402398768, 26791], [25.848308529411764, -80.18965176470589, 6482], [25.75539125, -80.19854875, 3383], [25.792015499230057, -80.18704306337811, 27146], [25.80229, -80.1886, 135], [25.83470727824465, -80.18632485153543, 14426], [25.80126875, -80.2016975, 1472], [25.761472766062866, -80.19047561743385, 86543], [25.77627995203649, -80.18933494423727, 14628], [25.77327739130435, -80.19107043478262, 4362], [25.78352719512195, -80.22042134146342, 18209], [25.76885793701257, -80.19121825563181, 12473], [25.7715725, -80.30229041666666, 5190], [25.824985384615385, -80.21411153846154, 2371], [25.74269, -80.21698, 36], [25.73556884003672, -80.23963341439291, 11461], [25.78396511476712, -80.20606963558446, 7993], [25.789141818181818, -80.19070181818182, 805], [25.770673999999996, -80.17294, 376], [25.78352, -80.172575, 644], [25.850130169491525, -80.17868864406779, 12141], [25.723538571428573, -80.25465642857144, 5109], [25.76256, -80.19125, 334], [25.730097045454546, -80.23773477272726, 3722], [25.712806666666665, -80.25479444444444, 1942], [25.803, -80.189, 121], [25.755523333333333, -80.20484761904761, 5493], [25.763880927406493, -80.19515607129763, 3850], [25.76802141509434, -80.2606920754717, 20904], [25.771036542056077, -80.23390869158878, 21768], [25.765829583333332, -80.29321166666666, 5309], [25.807081195037178, -80.20348588491728, 27692], [25.805736678784317, -80.19557305498282, 6978]],
+                {"blur": 15, "maxZoom": 13, "minOpacity": 0.5, "radius": 10}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var heat_map_d917d3099f743e93258e04e00ab90f92 = L.heatLayer(
+                [[25.810276744186048, -80.22124069767442, 8513], [25.776784444444445, -80.2826838888889, 3228], [25.760297946629464, -80.19903707477297, 9697], [25.768683336873497, -80.18897356399118, 54158], [25.789575, -80.19391375000001, 558], [25.72943407894737, -80.24191614035087, 47611], [25.758185542168675, -80.24064469879518, 13349], [25.753606944444446, -80.22384083333333, 14620], [25.81347664955032, -80.19300839119678, 47217], [25.748773142857143, -80.25193057142857, 7014], [25.774478, -80.18666800000001, 760], [25.768778490415958, -80.20967379987165, 23764], [25.84445, -80.21247, 325], [25.76818, -80.13738, 0], [25.78275077873455, -80.25736982623597, 14270], [25.79932714285714, -80.23658371428571, 8094], [25.82934373333333, -80.19852226666667, 14216], [25.766221547447593, -80.2198402398768, 26791], [25.848308529411764, -80.18965176470589, 6482], [25.75539125, -80.19854875, 3383], [25.792015499230057, -80.18704306337811, 27146], [25.80229, -80.1886, 135], [25.83470727824465, -80.18632485153543, 14426], [25.80126875, -80.2016975, 1472], [25.761472766062866, -80.19047561743385, 86543], [25.77627995203649, -80.18933494423727, 14628], [25.77327739130435, -80.19107043478262, 4362], [25.78352719512195, -80.22042134146342, 18209], [25.76885793701257, -80.19121825563181, 12473], [25.7715725, -80.30229041666666, 5190], [25.824985384615385, -80.21411153846154, 2371], [25.74269, -80.21698, 36], [25.73556884003672, -80.23963341439291, 11461], [25.78396511476712, -80.20606963558446, 7993], [25.789141818181818, -80.19070181818182, 805], [25.770673999999996, -80.17294, 376], [25.78352, -80.172575, 644], [25.850130169491525, -80.17868864406779, 12141], [25.723538571428573, -80.25465642857144, 5109], [25.76256, -80.19125, 334], [25.730097045454546, -80.23773477272726, 3722], [25.712806666666665, -80.25479444444444, 1942], [25.803, -80.189, 121], [25.755523333333333, -80.20484761904761, 5493], [25.763880927406493, -80.19515607129763, 3850], [25.76802141509434, -80.2606920754717, 20904], [25.771036542056077, -80.23390869158878, 21768], [25.765829583333332, -80.29321166666666, 5309], [25.807081195037178, -80.20348588491728, 27692], [25.805736678784317, -80.19557305498282, 6978]],
+                {"blur": 15, "maxZoom": 13, "minOpacity": 0.5, "radius": 10}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var marker_0138c18947a4dcfd99eb4f244d30a27c = L.marker(
+                [25.810276744186048, -80.22124069767442],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_c3191f3606e38470fee4ba1096029693 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0138c18947a4dcfd99eb4f244d30a27c.setIcon(icon_c3191f3606e38470fee4ba1096029693);
+        
+    
+        var popup_f0c9e9a1d2a51d3e5b1bc066a845daa2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c312ae25c67dc1a3ea26cce67339a2c = $(`<div id="html_9c312ae25c67dc1a3ea26cce67339a2c" style="width: 100.0%; height: 100.0%;">         Neighborhood: Allapattah<br>         Number of Bookings: 1156<br>         Availability: 8513<br>         Average Daily Rate: $116.37209302325581<br>         Annual Revenue: $683712         </div>`)[0];
+                popup_f0c9e9a1d2a51d3e5b1bc066a845daa2.setContent(html_9c312ae25c67dc1a3ea26cce67339a2c);
+            
+        
+
+        marker_0138c18947a4dcfd99eb4f244d30a27c.bindPopup(popup_f0c9e9a1d2a51d3e5b1bc066a845daa2)
+        ;
+
+        
+    
+    
+            var marker_36d7a22fcdb8732cc058a279b4e8c3ab = L.marker(
+                [25.776784444444445, -80.2826838888889],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_5904c99b3556fd64649c2817af38a1c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_36d7a22fcdb8732cc058a279b4e8c3ab.setIcon(icon_5904c99b3556fd64649c2817af38a1c5);
+        
+    
+        var popup_7c24455b2cc26d6ba1be4aa0ae93d35b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_362076679d157d7587e3ce961536efdb = $(`<div id="html_362076679d157d7587e3ce961536efdb" style="width: 100.0%; height: 100.0%;">         Neighborhood: Blue Lagoon<br>         Number of Bookings: 615<br>         Availability: 3228<br>         Average Daily Rate: $140.88888888888889<br>         Annual Revenue: $323589         </div>`)[0];
+                popup_7c24455b2cc26d6ba1be4aa0ae93d35b.setContent(html_362076679d157d7587e3ce961536efdb);
+            
+        
+
+        marker_36d7a22fcdb8732cc058a279b4e8c3ab.bindPopup(popup_7c24455b2cc26d6ba1be4aa0ae93d35b)
+        ;
+
+        
+    
+    
+            var marker_c30720e1ab6e12a6888498082d53652d = L.marker(
+                [25.760297946629464, -80.19903707477297],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_0a6ac3a64c6dbd3080c002128cd090e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c30720e1ab6e12a6888498082d53652d.setIcon(icon_0a6ac3a64c6dbd3080c002128cd090e0);
+        
+    
+        var popup_71546024d0c905e0d55a10385ba9bc9c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a018ca1204d7dd70d97353f6d839fbef = $(`<div id="html_a018ca1204d7dd70d97353f6d839fbef" style="width: 100.0%; height: 100.0%;">         Neighborhood: Brickell<br>         Number of Bookings: 1345<br>         Availability: 9697<br>         Average Daily Rate: $183.10256410256412<br>         Annual Revenue: $2022120         </div>`)[0];
+                popup_71546024d0c905e0d55a10385ba9bc9c.setContent(html_a018ca1204d7dd70d97353f6d839fbef);
+            
+        
+
+        marker_c30720e1ab6e12a6888498082d53652d.bindPopup(popup_71546024d0c905e0d55a10385ba9bc9c)
+        ;
+
+        
+    
+    
+            var marker_efaede718dfd6ea99b4fdd3896c97e79 = L.marker(
+                [25.768683336873497, -80.18897356399118],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_d7f2bd025dda3f879fd8e7ae32e55e48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_efaede718dfd6ea99b4fdd3896c97e79.setIcon(icon_d7f2bd025dda3f879fd8e7ae32e55e48);
+        
+    
+        var popup_3267029f769c2e53e7a7159bd1c9e261 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1150ae94994c102afc0a245450cc72b6 = $(`<div id="html_1150ae94994c102afc0a245450cc72b6" style="width: 100.0%; height: 100.0%;">         Neighborhood: Brickell Key<br>         Number of Bookings: 8486<br>         Availability: 54158<br>         Average Daily Rate: $285.5853658536585<br>         Annual Revenue: $12287833         </div>`)[0];
+                popup_3267029f769c2e53e7a7159bd1c9e261.setContent(html_1150ae94994c102afc0a245450cc72b6);
+            
+        
+
+        marker_efaede718dfd6ea99b4fdd3896c97e79.bindPopup(popup_3267029f769c2e53e7a7159bd1c9e261)
+        ;
+
+        
+    
+    
+            var marker_1fbf001277f2b3ac260d8d791b74d0a2 = L.marker(
+                [25.789575, -80.19391375000001],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_9ebb74ecc07d85c1acb7640eb225b5c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1fbf001277f2b3ac260d8d791b74d0a2.setIcon(icon_9ebb74ecc07d85c1acb7640eb225b5c4);
+        
+    
+        var popup_1526b0f539b5b281aa842f7afaa9dd72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d532782eb2930a50e7a8eb467f8eb99 = $(`<div id="html_3d532782eb2930a50e7a8eb467f8eb99" style="width: 100.0%; height: 100.0%;">         Neighborhood: Club Row<br>         Number of Bookings: 51<br>         Availability: 558<br>         Average Daily Rate: $216.875<br>         Annual Revenue: $61678         </div>`)[0];
+                popup_1526b0f539b5b281aa842f7afaa9dd72.setContent(html_3d532782eb2930a50e7a8eb467f8eb99);
+            
+        
+
+        marker_1fbf001277f2b3ac260d8d791b74d0a2.bindPopup(popup_1526b0f539b5b281aa842f7afaa9dd72)
+        ;
+
+        
+    
+    
+            var marker_ff99d78d66cf91b1e4cd4f2da2a30fad = L.marker(
+                [25.72943407894737, -80.24191614035087],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_dd8595e89625921cba72a0b0e560a238 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ff99d78d66cf91b1e4cd4f2da2a30fad.setIcon(icon_dd8595e89625921cba72a0b0e560a238);
+        
+    
+        var popup_e012a0a91a9945655a37ce5be7c5821d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d5ef9f9ded935b0d8d365f5b4adda16 = $(`<div id="html_4d5ef9f9ded935b0d8d365f5b4adda16" style="width: 100.0%; height: 100.0%;">         Neighborhood: Coconut Grove<br>         Number of Bookings: 8971<br>         Availability: 47611<br>         Average Daily Rate: $188.99122807017545<br>         Annual Revenue: $8272534         </div>`)[0];
+                popup_e012a0a91a9945655a37ce5be7c5821d.setContent(html_4d5ef9f9ded935b0d8d365f5b4adda16);
+            
+        
+
+        marker_ff99d78d66cf91b1e4cd4f2da2a30fad.bindPopup(popup_e012a0a91a9945655a37ce5be7c5821d)
+        ;
+
+        
+    
+    
+            var marker_d6ab92bbca436e2cb8fe8e6b0f72a82b = L.marker(
+                [25.758185542168675, -80.24064469879518],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_32410351bd48b2a72fdc99cf0ca8f95d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d6ab92bbca436e2cb8fe8e6b0f72a82b.setIcon(icon_32410351bd48b2a72fdc99cf0ca8f95d);
+        
+    
+        var popup_a3439e19f4996ffa0fc3549258d938a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc2c7f81658882e884df2f9fcb48cd6e = $(`<div id="html_cc2c7f81658882e884df2f9fcb48cd6e" style="width: 100.0%; height: 100.0%;">         Neighborhood: Coral Gate<br>         Number of Bookings: 1673<br>         Availability: 13349<br>         Average Daily Rate: $131.74698795180723<br>         Annual Revenue: $1528292         </div>`)[0];
+                popup_a3439e19f4996ffa0fc3549258d938a0.setContent(html_cc2c7f81658882e884df2f9fcb48cd6e);
+            
+        
+
+        marker_d6ab92bbca436e2cb8fe8e6b0f72a82b.bindPopup(popup_a3439e19f4996ffa0fc3549258d938a0)
+        ;
+
+        
+    
+    
+            var marker_299dec430af65254d21e9c21aa90190d = L.marker(
+                [25.753606944444446, -80.22384083333333],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_a6c5e59d34d5cf520fe7f69cd7e4e288 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_299dec430af65254d21e9c21aa90190d.setIcon(icon_a6c5e59d34d5cf520fe7f69cd7e4e288);
+        
+    
+        var popup_8771b9271907fca8aa7cdc0efa2ce65d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bbc93451b8dbacc5e0b6e310cd17ffd = $(`<div id="html_2bbc93451b8dbacc5e0b6e310cd17ffd" style="width: 100.0%; height: 100.0%;">         Neighborhood: Coral Way<br>         Number of Bookings: 2271<br>         Availability: 14620<br>         Average Daily Rate: $191.31944444444446<br>         Annual Revenue: $1995271         </div>`)[0];
+                popup_8771b9271907fca8aa7cdc0efa2ce65d.setContent(html_2bbc93451b8dbacc5e0b6e310cd17ffd);
+            
+        
+
+        marker_299dec430af65254d21e9c21aa90190d.bindPopup(popup_8771b9271907fca8aa7cdc0efa2ce65d)
+        ;
+
+        
+    
+    
+            var marker_c033bfcbba0c26dc28168af77c79fe46 = L.marker(
+                [25.81347664955032, -80.19300839119678],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_a360bd4fd3ec1cc3524e258e5c25cf60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c033bfcbba0c26dc28168af77c79fe46.setIcon(icon_a360bd4fd3ec1cc3524e258e5c25cf60);
+        
+    
+        var popup_f8b0252dee74c03272a58c87672056ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a30a5e408404761201f7874d04e42293 = $(`<div id="html_a30a5e408404761201f7874d04e42293" style="width: 100.0%; height: 100.0%;">         Neighborhood: Design District<br>         Number of Bookings: 4851<br>         Availability: 47217<br>         Average Daily Rate: $207.0<br>         Annual Revenue: $7114585         </div>`)[0];
+                popup_f8b0252dee74c03272a58c87672056ca.setContent(html_a30a5e408404761201f7874d04e42293);
+            
+        
+
+        marker_c033bfcbba0c26dc28168af77c79fe46.bindPopup(popup_f8b0252dee74c03272a58c87672056ca)
+        ;
+
+        
+    
+    
+            var marker_0af1652e2598977fd4e0361dc3cbd739 = L.marker(
+                [25.748773142857143, -80.25193057142857],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_803e26950ed2c954b2daa1b028d3ad97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0af1652e2598977fd4e0361dc3cbd739.setIcon(icon_803e26950ed2c954b2daa1b028d3ad97);
+        
+    
+        var popup_a33442bf5ac230b5b096899397b6293b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de9680babecdf6d88147a15b58eaec8b = $(`<div id="html_de9680babecdf6d88147a15b58eaec8b" style="width: 100.0%; height: 100.0%;">         Neighborhood: Downtown Coral Gables<br>         Number of Bookings: 807<br>         Availability: 7014<br>         Average Daily Rate: $247.45714285714286<br>         Annual Revenue: $1138735         </div>`)[0];
+                popup_a33442bf5ac230b5b096899397b6293b.setContent(html_de9680babecdf6d88147a15b58eaec8b);
+            
+        
+
+        marker_0af1652e2598977fd4e0361dc3cbd739.bindPopup(popup_a33442bf5ac230b5b096899397b6293b)
+        ;
+
+        
+    
+    
+            var marker_81c5be11817ffdcae31183bd16b78e6b = L.marker(
+                [25.774478, -80.18666800000001],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_6cbf89745f177d5631769beb708003de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81c5be11817ffdcae31183bd16b78e6b.setIcon(icon_6cbf89745f177d5631769beb708003de);
+        
+    
+        var popup_cb855b48bceb11a0adbc3fb112c3246a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c3d84cfbb9e5c7625358c8199ee2cf5 = $(`<div id="html_0c3d84cfbb9e5c7625358c8199ee2cf5" style="width: 100.0%; height: 100.0%;">         Neighborhood: Downtown Miami<br>         Number of Bookings: 80<br>         Availability: 760<br>         Average Daily Rate: $315.0<br>         Annual Revenue: $146043         </div>`)[0];
+                popup_cb855b48bceb11a0adbc3fb112c3246a.setContent(html_0c3d84cfbb9e5c7625358c8199ee2cf5);
+            
+        
+
+        marker_81c5be11817ffdcae31183bd16b78e6b.bindPopup(popup_cb855b48bceb11a0adbc3fb112c3246a)
+        ;
+
+        
+    
+    
+            var marker_b4aaab69609ae80a149901adbc72c2c0 = L.marker(
+                [25.768778490415958, -80.20967379987165],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_2fa2dbff94d6a93647f8b29ad5244202 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b4aaab69609ae80a149901adbc72c2c0.setIcon(icon_2fa2dbff94d6a93647f8b29ad5244202);
+        
+    
+        var popup_bbfcf501b5159573d43a74933161250d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f91fc0585a2223eb8aed9d98376155aa = $(`<div id="html_f91fc0585a2223eb8aed9d98376155aa" style="width: 100.0%; height: 100.0%;">         Neighborhood: East Little Havana<br>         Number of Bookings: 2932<br>         Availability: 23764<br>         Average Daily Rate: $139.725<br>         Annual Revenue: $2299773         </div>`)[0];
+                popup_bbfcf501b5159573d43a74933161250d.setContent(html_f91fc0585a2223eb8aed9d98376155aa);
+            
+        
+
+        marker_b4aaab69609ae80a149901adbc72c2c0.bindPopup(popup_bbfcf501b5159573d43a74933161250d)
+        ;
+
+        
+    
+    
+            var marker_e79217432499b029939d358c6e3a18f9 = L.marker(
+                [25.84445, -80.21247],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_04c5ae56b7e6f690440eddefc788c9a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e79217432499b029939d358c6e3a18f9.setIcon(icon_04c5ae56b7e6f690440eddefc788c9a8);
+        
+    
+        var popup_7c19917728479ea34cca106b57b70d5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0719cdb89be7743507c795840c662aa2 = $(`<div id="html_0719cdb89be7743507c795840c662aa2" style="width: 100.0%; height: 100.0%;">         Neighborhood: El Portal<br>         Number of Bookings: 26<br>         Availability: 325<br>         Average Daily Rate: $167.0<br>         Annual Revenue: $33927         </div>`)[0];
+                popup_7c19917728479ea34cca106b57b70d5b.setContent(html_0719cdb89be7743507c795840c662aa2);
+            
+        
+
+        marker_e79217432499b029939d358c6e3a18f9.bindPopup(popup_7c19917728479ea34cca106b57b70d5b)
+        ;
+
+        
+    
+    
+            var marker_305ccc741832eb0ef740462d5ecdc383 = L.marker(
+                [25.76818, -80.13738],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_34ba4c27a789bc8f3782fcb4b6dca7e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_305ccc741832eb0ef740462d5ecdc383.setIcon(icon_34ba4c27a789bc8f3782fcb4b6dca7e5);
+        
+    
+        var popup_521adc8bb8ed3cff1119a512dac04477 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fa3af83e564c8773a7e320e48b5175e = $(`<div id="html_6fa3af83e564c8773a7e320e48b5175e" style="width: 100.0%; height: 100.0%;">         Neighborhood: Fisher Island<br>         Number of Bookings: 0<br>         Availability: 0<br>         Average Daily Rate: $585.0<br>         Annual Revenue: $702         </div>`)[0];
+                popup_521adc8bb8ed3cff1119a512dac04477.setContent(html_6fa3af83e564c8773a7e320e48b5175e);
+            
+        
+
+        marker_305ccc741832eb0ef740462d5ecdc383.bindPopup(popup_521adc8bb8ed3cff1119a512dac04477)
+        ;
+
+        
+    
+    
+            var marker_b09182f0fd50d428e7355c1820f871a5 = L.marker(
+                [25.78275077873455, -80.25736982623597],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_4ba54be3468ccc9cfdfdf8803565c7a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b09182f0fd50d428e7355c1820f871a5.setIcon(icon_4ba54be3468ccc9cfdfdf8803565c7a3);
+        
+    
+        var popup_6094f60b6fef24c4d7aefae9a1cf0504 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4aff068d55e019bceef35aeb33150c38 = $(`<div id="html_4aff068d55e019bceef35aeb33150c38" style="width: 100.0%; height: 100.0%;">         Neighborhood: Flagami<br>         Number of Bookings: 2719<br>         Availability: 14270<br>         Average Daily Rate: $127.01492537313433<br>         Annual Revenue: $1283639         </div>`)[0];
+                popup_6094f60b6fef24c4d7aefae9a1cf0504.setContent(html_4aff068d55e019bceef35aeb33150c38);
+            
+        
+
+        marker_b09182f0fd50d428e7355c1820f871a5.bindPopup(popup_6094f60b6fef24c4d7aefae9a1cf0504)
+        ;
+
+        
+    
+    
+            var marker_2a6d5351e105fdfb0c47d319abbf134a = L.marker(
+                [25.79932714285714, -80.23658371428571],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_457bb5273b4eeb69d71d6423ee0f8420 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2a6d5351e105fdfb0c47d319abbf134a.setIcon(icon_457bb5273b4eeb69d71d6423ee0f8420);
+        
+    
+        var popup_9be330c3d3f869badc7824b81209a7db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9112efdfa250e28807ddd8bcea91181e = $(`<div id="html_9112efdfa250e28807ddd8bcea91181e" style="width: 100.0%; height: 100.0%;">         Neighborhood: Liberty City<br>         Number of Bookings: 1846<br>         Availability: 8094<br>         Average Daily Rate: $131.71428571428572<br>         Annual Revenue: $869208         </div>`)[0];
+                popup_9be330c3d3f869badc7824b81209a7db.setContent(html_9112efdfa250e28807ddd8bcea91181e);
+            
+        
+
+        marker_2a6d5351e105fdfb0c47d319abbf134a.bindPopup(popup_9be330c3d3f869badc7824b81209a7db)
+        ;
+
+        
+    
+    
+            var marker_ee4c6d024c56714c02c64ade9f0a28ac = L.marker(
+                [25.82934373333333, -80.19852226666667],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_507f7756b664d73c33d476d95ade00ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee4c6d024c56714c02c64ade9f0a28ac.setIcon(icon_507f7756b664d73c33d476d95ade00ca);
+        
+    
+        var popup_e29fed20b5fa784b1a3abd27ccbf0d09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33ad268cec635727da28ab3feb3f7b28 = $(`<div id="html_33ad268cec635727da28ab3feb3f7b28" style="width: 100.0%; height: 100.0%;">         Neighborhood: Little Haiti<br>         Number of Bookings: 1374<br>         Availability: 14216<br>         Average Daily Rate: $173.46666666666667<br>         Annual Revenue: $1370170         </div>`)[0];
+                popup_e29fed20b5fa784b1a3abd27ccbf0d09.setContent(html_33ad268cec635727da28ab3feb3f7b28);
+            
+        
+
+        marker_ee4c6d024c56714c02c64ade9f0a28ac.bindPopup(popup_e29fed20b5fa784b1a3abd27ccbf0d09)
+        ;
+
+        
+    
+    
+            var marker_a4fa5f6e85de1d463273bb5060a6a77e = L.marker(
+                [25.766221547447593, -80.2198402398768],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_e8aacdbff105d8b7a4726d4e940d846b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a4fa5f6e85de1d463273bb5060a6a77e.setIcon(icon_e8aacdbff105d8b7a4726d4e940d846b);
+        
+    
+        var popup_1e373238b708ae8464c40aa4818f8cd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_903368912855370a247beb4fc11df385 = $(`<div id="html_903368912855370a247beb4fc11df385" style="width: 100.0%; height: 100.0%;">         Neighborhood: Little Havana<br>         Number of Bookings: 4021<br>         Availability: 26791<br>         Average Daily Rate: $125.55357142857143<br>         Annual Revenue: $2438395         </div>`)[0];
+                popup_1e373238b708ae8464c40aa4818f8cd5.setContent(html_903368912855370a247beb4fc11df385);
+            
+        
+
+        marker_a4fa5f6e85de1d463273bb5060a6a77e.bindPopup(popup_1e373238b708ae8464c40aa4818f8cd5)
+        ;
+
+        
+    
+    
+            var marker_bab499c7679d1054d20c8f40e8c0b008 = L.marker(
+                [25.848308529411764, -80.18965176470589],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_054068feb769a45214cf9aa3050e8a4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bab499c7679d1054d20c8f40e8c0b008.setIcon(icon_054068feb769a45214cf9aa3050e8a4d);
+        
+    
+        var popup_2dfaa6cb0de3c9da0ab3cb01a1fcfc07 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_377c2529d568d5d4ca154f7578b92e4d = $(`<div id="html_377c2529d568d5d4ca154f7578b92e4d" style="width: 100.0%; height: 100.0%;">         Neighborhood: Little River<br>         Number of Bookings: 624<br>         Availability: 6482<br>         Average Daily Rate: $134.85294117647058<br>         Annual Revenue: $464995         </div>`)[0];
+                popup_2dfaa6cb0de3c9da0ab3cb01a1fcfc07.setContent(html_377c2529d568d5d4ca154f7578b92e4d);
+            
+        
+
+        marker_bab499c7679d1054d20c8f40e8c0b008.bindPopup(popup_2dfaa6cb0de3c9da0ab3cb01a1fcfc07)
+        ;
+
+        
+    
+    
+            var marker_a69fa397b36e4ad83477dddf65a374cf = L.marker(
+                [25.75539125, -80.19854875],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_4dc92d3d2d770a0971eafe0314b14a58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a69fa397b36e4ad83477dddf65a374cf.setIcon(icon_4dc92d3d2d770a0971eafe0314b14a58);
+        
+    
+        var popup_e6c72ae518ab067b12175c9e7c6148d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_582a5c9ed49fa88805f70b3eb50fad86 = $(`<div id="html_582a5c9ed49fa88805f70b3eb50fad86" style="width: 100.0%; height: 100.0%;">         Neighborhood: Lower Brickell<br>         Number of Bookings: 332<br>         Availability: 3383<br>         Average Daily Rate: $643.625<br>         Annual Revenue: $1047009         </div>`)[0];
+                popup_e6c72ae518ab067b12175c9e7c6148d2.setContent(html_582a5c9ed49fa88805f70b3eb50fad86);
+            
+        
+
+        marker_a69fa397b36e4ad83477dddf65a374cf.bindPopup(popup_e6c72ae518ab067b12175c9e7c6148d2)
+        ;
+
+        
+    
+    
+            var marker_4c2a5a4d92c17236569adaf9db971b3a = L.marker(
+                [25.792015499230057, -80.18704306337811],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_daf20e7e275b9d6d47145a7c4c74e76a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4c2a5a4d92c17236569adaf9db971b3a.setIcon(icon_daf20e7e275b9d6d47145a7c4c74e76a);
+        
+    
+        var popup_f5231132a48c0e46c1b1223abf26847b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d44415e8709d1a2afb0525381d956d0 = $(`<div id="html_5d44415e8709d1a2afb0525381d956d0" style="width: 100.0%; height: 100.0%;">         Neighborhood: Media and Entertainment District<br>         Number of Bookings: 2049<br>         Availability: 27146<br>         Average Daily Rate: $278.7096774193548<br>         Annual Revenue: $5402074         </div>`)[0];
+                popup_f5231132a48c0e46c1b1223abf26847b.setContent(html_5d44415e8709d1a2afb0525381d956d0);
+            
+        
+
+        marker_4c2a5a4d92c17236569adaf9db971b3a.bindPopup(popup_f5231132a48c0e46c1b1223abf26847b)
+        ;
+
+        
+    
+    
+            var marker_d2ebd6725bb6a453e27d423b3ebd128e = L.marker(
+                [25.80229, -80.1886],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_8d0ac5c6b22246f7e175c63c40d5a3ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d2ebd6725bb6a453e27d423b3ebd128e.setIcon(icon_8d0ac5c6b22246f7e175c63c40d5a3ea);
+        
+    
+        var popup_050c6ce2f3a313173c8906b6ea2b9a02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a24467afd3ed74d3812840880ae8feb = $(`<div id="html_3a24467afd3ed74d3812840880ae8feb" style="width: 100.0%; height: 100.0%;">         Neighborhood: Medley<br>         Number of Bookings: 10<br>         Availability: 135<br>         Average Daily Rate: $302.0<br>         Annual Revenue: $18423         </div>`)[0];
+                popup_050c6ce2f3a313173c8906b6ea2b9a02.setContent(html_3a24467afd3ed74d3812840880ae8feb);
+            
+        
+
+        marker_d2ebd6725bb6a453e27d423b3ebd128e.bindPopup(popup_050c6ce2f3a313173c8906b6ea2b9a02)
+        ;
+
+        
+    
+    
+            var marker_f384d7d19b002f31c59f28c46a7cf7db = L.marker(
+                [25.83470727824465, -80.18632485153543],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_a33743179d897fead1f1a710e0a699e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f384d7d19b002f31c59f28c46a7cf7db.setIcon(icon_a33743179d897fead1f1a710e0a699e3);
+        
+    
+        var popup_0a32a20e82673c26d67d113897719b8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a2d6a018122d311e8e3eb36de9047dd = $(`<div id="html_7a2d6a018122d311e8e3eb36de9047dd" style="width: 100.0%; height: 100.0%;">         Neighborhood: MiMo Biscayne Boulevard<br>         Number of Bookings: 1688<br>         Availability: 14426<br>         Average Daily Rate: $157.984126984127<br>         Annual Revenue: $1460101         </div>`)[0];
+                popup_0a32a20e82673c26d67d113897719b8c.setContent(html_7a2d6a018122d311e8e3eb36de9047dd);
+            
+        
+
+        marker_f384d7d19b002f31c59f28c46a7cf7db.bindPopup(popup_0a32a20e82673c26d67d113897719b8c)
+        ;
+
+        
+    
+    
+            var marker_27e9fcafbd7905220d812eb496c6ead0 = L.marker(
+                [25.80126875, -80.2016975],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_90048cafedc815ef6de2b3b781405df9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_27e9fcafbd7905220d812eb496c6ead0.setIcon(icon_90048cafedc815ef6de2b3b781405df9);
+        
+    
+        var popup_f7e4bc6f8eef175d6356d99207431ea1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f72ad0f909dc09390b9e685605eb9496 = $(`<div id="html_f72ad0f909dc09390b9e685605eb9496" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami Fashion District<br>         Number of Bookings: 234<br>         Availability: 1472<br>         Average Daily Rate: $313.5<br>         Annual Revenue: $311642         </div>`)[0];
+                popup_f7e4bc6f8eef175d6356d99207431ea1.setContent(html_f72ad0f909dc09390b9e685605eb9496);
+            
+        
+
+        marker_27e9fcafbd7905220d812eb496c6ead0.bindPopup(popup_f7e4bc6f8eef175d6356d99207431ea1)
+        ;
+
+        
+    
+    
+            var marker_b39f699d4e710ccec47c1cc5cd450893 = L.marker(
+                [25.761472766062866, -80.19047561743385],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_809a3d3e9f5f849779b64aaa71015ded = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b39f699d4e710ccec47c1cc5cd450893.setIcon(icon_809a3d3e9f5f849779b64aaa71015ded);
+        
+    
+        var popup_5fb785a8ce0dda7e00fe9b1a264935ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be8e74e3b98fcac5d48f730e71e92843 = $(`<div id="html_be8e74e3b98fcac5d48f730e71e92843" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami Financial District<br>         Number of Bookings: 11103<br>         Availability: 86543<br>         Average Daily Rate: $235.93658536585366<br>         Annual Revenue: $14738804         </div>`)[0];
+                popup_5fb785a8ce0dda7e00fe9b1a264935ed.setContent(html_be8e74e3b98fcac5d48f730e71e92843);
+            
+        
+
+        marker_b39f699d4e710ccec47c1cc5cd450893.bindPopup(popup_5fb785a8ce0dda7e00fe9b1a264935ed)
+        ;
+
+        
+    
+    
+            var marker_729a4d7b9a74f5e6873c7c886744a04e = L.marker(
+                [25.77627995203649, -80.18933494423727],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_e805477d3fbdea88fd60765739edae29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_729a4d7b9a74f5e6873c7c886744a04e.setIcon(icon_e805477d3fbdea88fd60765739edae29);
+        
+    
+        var popup_70c6c6f1f4ebb7e3597151b2cbcc7902 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c2089dca06435c756c18904e3189ab3 = $(`<div id="html_0c2089dca06435c756c18904e3189ab3" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami Government District<br>         Number of Bookings: 1882<br>         Availability: 14628<br>         Average Daily Rate: $219.6639344262295<br>         Annual Revenue: $2220663         </div>`)[0];
+                popup_70c6c6f1f4ebb7e3597151b2cbcc7902.setContent(html_0c2089dca06435c756c18904e3189ab3);
+            
+        
+
+        marker_729a4d7b9a74f5e6873c7c886744a04e.bindPopup(popup_70c6c6f1f4ebb7e3597151b2cbcc7902)
+        ;
+
+        
+    
+    
+            var marker_d767a2369511ada7dbfb1dac478737b1 = L.marker(
+                [25.77327739130435, -80.19107043478262],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_fbdf022aeee6507a40c43c6d052b541c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d767a2369511ada7dbfb1dac478737b1.setIcon(icon_fbdf022aeee6507a40c43c6d052b541c);
+        
+    
+        var popup_fcacbb78ad84bdd99b443e4e3e2eb882 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8148c23601ff83f7779e770fcb9ee85e = $(`<div id="html_8148c23601ff83f7779e770fcb9ee85e" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami Jewelry District<br>         Number of Bookings: 464<br>         Availability: 4362<br>         Average Daily Rate: $184.82608695652175<br>         Annual Revenue: $645565         </div>`)[0];
+                popup_fcacbb78ad84bdd99b443e4e3e2eb882.setContent(html_8148c23601ff83f7779e770fcb9ee85e);
+            
+        
+
+        marker_d767a2369511ada7dbfb1dac478737b1.bindPopup(popup_fcacbb78ad84bdd99b443e4e3e2eb882)
+        ;
+
+        
+    
+    
+            var marker_da9a0f0308f82ad29c4b6049b64edfdd = L.marker(
+                [25.78352719512195, -80.22042134146342],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_484cf4fd639efb69cbdba402e0dbe7bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da9a0f0308f82ad29c4b6049b64edfdd.setIcon(icon_484cf4fd639efb69cbdba402e0dbe7bd);
+        
+    
+        var popup_2bbd85517d26f12cbb714e72fdaf861b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66824079c420afbbfe44863262edace8 = $(`<div id="html_66824079c420afbbfe44863262edace8" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami River<br>         Number of Bookings: 2938<br>         Availability: 18209<br>         Average Daily Rate: $163.47560975609755<br>         Annual Revenue: $1871817         </div>`)[0];
+                popup_2bbd85517d26f12cbb714e72fdaf861b.setContent(html_66824079c420afbbfe44863262edace8);
+            
+        
+
+        marker_da9a0f0308f82ad29c4b6049b64edfdd.bindPopup(popup_2bbd85517d26f12cbb714e72fdaf861b)
+        ;
+
+        
+    
+    
+            var marker_a1293c0ce3d154a0812d085c5820f6c7 = L.marker(
+                [25.76885793701257, -80.19121825563181],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_ece67aad3b5aa23c85bb34357f0c6bad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a1293c0ce3d154a0812d085c5820f6c7.setIcon(icon_ece67aad3b5aa23c85bb34357f0c6bad);
+        
+    
+        var popup_0729043046fc2b736f0b51939c504196 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de3a310b76136c3da00d4f0311a8fd72 = $(`<div id="html_de3a310b76136c3da00d4f0311a8fd72" style="width: 100.0%; height: 100.0%;">         Neighborhood: Miami Riverwalk<br>         Number of Bookings: 1735<br>         Availability: 12473<br>         Average Daily Rate: $270.9714285714286<br>         Annual Revenue: $2581916         </div>`)[0];
+                popup_0729043046fc2b736f0b51939c504196.setContent(html_de3a310b76136c3da00d4f0311a8fd72);
+            
+        
+
+        marker_a1293c0ce3d154a0812d085c5820f6c7.bindPopup(popup_0729043046fc2b736f0b51939c504196)
+        ;
+
+        
+    
+    
+            var marker_58aa297d5e15129d159c526ff06f46e1 = L.marker(
+                [25.7715725, -80.30229041666666],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_d464695b62840d2d1ceaba2ca8f4321b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_58aa297d5e15129d159c526ff06f46e1.setIcon(icon_d464695b62840d2d1ceaba2ca8f4321b);
+        
+    
+        var popup_c4cc568727b4c45948774b120563dc06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c162eb929d63201d4a41a3bc098d24c = $(`<div id="html_0c162eb929d63201d4a41a3bc098d24c" style="width: 100.0%; height: 100.0%;">         Neighborhood: Mision Esperanza<br>         Number of Bookings: 939<br>         Availability: 5190<br>         Average Daily Rate: $114.08333333333333<br>         Annual Revenue: $434847         </div>`)[0];
+                popup_c4cc568727b4c45948774b120563dc06.setContent(html_0c162eb929d63201d4a41a3bc098d24c);
+            
+        
+
+        marker_58aa297d5e15129d159c526ff06f46e1.bindPopup(popup_c4cc568727b4c45948774b120563dc06)
+        ;
+
+        
+    
+    
+            var marker_3275a606f7c991f69a5ba78ba4e322f6 = L.marker(
+                [25.824985384615385, -80.21411153846154],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_bab36b7b518cb9a0644f1781ea56e100 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3275a606f7c991f69a5ba78ba4e322f6.setIcon(icon_bab36b7b518cb9a0644f1781ea56e100);
+        
+    
+        var popup_73a95c22d3831df3c7a54270de9d78b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0096941749d27185ce661783ef842a0b = $(`<div id="html_0096941749d27185ce661783ef842a0b" style="width: 100.0%; height: 100.0%;">         Neighborhood: Model City<br>         Number of Bookings: 391<br>         Availability: 2371<br>         Average Daily Rate: $99.61538461538461<br>         Annual Revenue: $201553         </div>`)[0];
+                popup_73a95c22d3831df3c7a54270de9d78b2.setContent(html_0096941749d27185ce661783ef842a0b);
+            
+        
+
+        marker_3275a606f7c991f69a5ba78ba4e322f6.bindPopup(popup_73a95c22d3831df3c7a54270de9d78b2)
+        ;
+
+        
+    
+    
+            var marker_842757b425db0c6c1cfb22ccc958e630 = L.marker(
+                [25.74269, -80.21698],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_314a833014fe9ca3e7c27dbdfdc2b153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_842757b425db0c6c1cfb22ccc958e630.setIcon(icon_314a833014fe9ca3e7c27dbdfdc2b153);
+        
+    
+        var popup_d5521765122965d9c48bd6465516fa23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b351b3b53c6b73546334f532a35a51f0 = $(`<div id="html_b351b3b53c6b73546334f532a35a51f0" style="width: 100.0%; height: 100.0%;">         Neighborhood: Northeast Coconut Grove<br>         Number of Bookings: 4<br>         Availability: 36<br>         Average Daily Rate: $1938.0<br>         Annual Revenue: $27907         </div>`)[0];
+                popup_d5521765122965d9c48bd6465516fa23.setContent(html_b351b3b53c6b73546334f532a35a51f0);
+            
+        
+
+        marker_842757b425db0c6c1cfb22ccc958e630.bindPopup(popup_d5521765122965d9c48bd6465516fa23)
+        ;
+
+        
+    
+    
+            var marker_a8506491303d6785b6ec3c9d7f777711 = L.marker(
+                [25.73556884003672, -80.23963341439291],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_e695ed45b0379125879f6893d10f346a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a8506491303d6785b6ec3c9d7f777711.setIcon(icon_e695ed45b0379125879f6893d10f346a);
+        
+    
+        var popup_f7217f9e1e5da2aafcd2b583348d7312 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17fd0f491bbd84a4c0a41902e735d6e0 = $(`<div id="html_17fd0f491bbd84a4c0a41902e735d6e0" style="width: 100.0%; height: 100.0%;">         Neighborhood: Ocean View Heights<br>         Number of Bookings: 1800<br>         Availability: 11461<br>         Average Daily Rate: $215.56<br>         Annual Revenue: $1956922         </div>`)[0];
+                popup_f7217f9e1e5da2aafcd2b583348d7312.setContent(html_17fd0f491bbd84a4c0a41902e735d6e0);
+            
+        
+
+        marker_a8506491303d6785b6ec3c9d7f777711.bindPopup(popup_f7217f9e1e5da2aafcd2b583348d7312)
+        ;
+
+        
+    
+    
+            var marker_f496518093641d6481af2b657636c49e = L.marker(
+                [25.78396511476712, -80.20606963558446],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_eb8d750a69541afe0060925f09217c99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f496518093641d6481af2b657636c49e.setIcon(icon_eb8d750a69541afe0060925f09217c99);
+        
+    
+        var popup_86f7bdc8c26ff9eeb1320a903706bc8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a32b7c3d3a956bd8184f3fba734dc95b = $(`<div id="html_a32b7c3d3a956bd8184f3fba734dc95b" style="width: 100.0%; height: 100.0%;">         Neighborhood: Overtown<br>         Number of Bookings: 1071<br>         Availability: 7993<br>         Average Daily Rate: $124.26785714285714<br>         Annual Revenue: $581752         </div>`)[0];
+                popup_86f7bdc8c26ff9eeb1320a903706bc8b.setContent(html_a32b7c3d3a956bd8184f3fba734dc95b);
+            
+        
+
+        marker_f496518093641d6481af2b657636c49e.bindPopup(popup_86f7bdc8c26ff9eeb1320a903706bc8b)
+        ;
+
+        
+    
+    
+            var marker_6fa8dc79eea83c76c37c8dd003dcb46e = L.marker(
+                [25.789141818181818, -80.19070181818182],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_b2b92e1f62081d076267ec4f2679e6b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fa8dc79eea83c76c37c8dd003dcb46e.setIcon(icon_b2b92e1f62081d076267ec4f2679e6b2);
+        
+    
+        var popup_d55eb02eaa08be4c40cd7c6bd0248197 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce3acfbe1640a72b6b0141a3ba4b0e5e = $(`<div id="html_ce3acfbe1640a72b6b0141a3ba4b0e5e" style="width: 100.0%; height: 100.0%;">         Neighborhood: Performing Arts District<br>         Number of Bookings: 76<br>         Availability: 805<br>         Average Daily Rate: $182.63636363636363<br>         Annual Revenue: $141352         </div>`)[0];
+                popup_d55eb02eaa08be4c40cd7c6bd0248197.setContent(html_ce3acfbe1640a72b6b0141a3ba4b0e5e);
+            
+        
+
+        marker_6fa8dc79eea83c76c37c8dd003dcb46e.bindPopup(popup_d55eb02eaa08be4c40cd7c6bd0248197)
+        ;
+
+        
+    
+    
+            var marker_f473c576e691b0b4b80155063516639d = L.marker(
+                [25.770673999999996, -80.17294],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_bc58c20cefa7efe7d43501b82aaa48ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f473c576e691b0b4b80155063516639d.setIcon(icon_bc58c20cefa7efe7d43501b82aaa48ef);
+        
+    
+        var popup_05738e37f57c7bdfdf2273d4d5ee4e6f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ddd9f9ada267ae64d944783e5da8a11 = $(`<div id="html_0ddd9f9ada267ae64d944783e5da8a11" style="width: 100.0%; height: 100.0%;">         Neighborhood: Port of Miami<br>         Number of Bookings: 20<br>         Availability: 376<br>         Average Daily Rate: $191.4<br>         Annual Revenue: $32439         </div>`)[0];
+                popup_05738e37f57c7bdfdf2273d4d5ee4e6f.setContent(html_0ddd9f9ada267ae64d944783e5da8a11);
+            
+        
+
+        marker_f473c576e691b0b4b80155063516639d.bindPopup(popup_05738e37f57c7bdfdf2273d4d5ee4e6f)
+        ;
+
+        
+    
+    
+            var marker_22a3ea848c9f4249f10bd0b4899b3612 = L.marker(
+                [25.78352, -80.172575],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_b9714a733854e7a138139e4258fa9ef6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_22a3ea848c9f4249f10bd0b4899b3612.setIcon(icon_b9714a733854e7a138139e4258fa9ef6);
+        
+    
+        var popup_11cd4d8c0e0ed019ff397f67cf94c952 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7320a831fbd035674f875bea1df7a7a3 = $(`<div id="html_7320a831fbd035674f875bea1df7a7a3" style="width: 100.0%; height: 100.0%;">         Neighborhood: Seybold<br>         Number of Bookings: 46<br>         Availability: 644<br>         Average Daily Rate: $112.0<br>         Annual Revenue: $25968         </div>`)[0];
+                popup_11cd4d8c0e0ed019ff397f67cf94c952.setContent(html_7320a831fbd035674f875bea1df7a7a3);
+            
+        
+
+        marker_22a3ea848c9f4249f10bd0b4899b3612.bindPopup(popup_11cd4d8c0e0ed019ff397f67cf94c952)
+        ;
+
+        
+    
+    
+            var marker_9e26bf00b731be558eda6ce2fa4da23d = L.marker(
+                [25.850130169491525, -80.17868864406779],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_16c295800f9e81a9989e4c66f7e50aaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9e26bf00b731be558eda6ce2fa4da23d.setIcon(icon_16c295800f9e81a9989e4c66f7e50aaa);
+        
+    
+        var popup_0316285c392d7f83474150ae262b1095 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac53c89240b7ce8c8ffe70fc1a008c2a = $(`<div id="html_ac53c89240b7ce8c8ffe70fc1a008c2a" style="width: 100.0%; height: 100.0%;">         Neighborhood: Shorecrest<br>         Number of Bookings: 1492<br>         Availability: 12141<br>         Average Daily Rate: $459.9491525423729<br>         Annual Revenue: $2722422         </div>`)[0];
+                popup_0316285c392d7f83474150ae262b1095.setContent(html_ac53c89240b7ce8c8ffe70fc1a008c2a);
+            
+        
+
+        marker_9e26bf00b731be558eda6ce2fa4da23d.bindPopup(popup_0316285c392d7f83474150ae262b1095)
+        ;
+
+        
+    
+    
+            var marker_a1b8dc56804d0f6410b4daa4064ca02b = L.marker(
+                [25.723538571428573, -80.25465642857144],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_c836d498ea46edc35b96ac40f95d38c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a1b8dc56804d0f6410b4daa4064ca02b.setIcon(icon_c836d498ea46edc35b96ac40f95d38c1);
+        
+    
+        var popup_06b956f3453689e3e4bc52a55ad33cd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5652577027c78450419d2636788d0bf5 = $(`<div id="html_5652577027c78450419d2636788d0bf5" style="width: 100.0%; height: 100.0%;">         Neighborhood: South Coconut Grove<br>         Number of Bookings: 524<br>         Availability: 5109<br>         Average Daily Rate: $257.4642857142857<br>         Annual Revenue: $711176         </div>`)[0];
+                popup_06b956f3453689e3e4bc52a55ad33cd9.setContent(html_5652577027c78450419d2636788d0bf5);
+            
+        
+
+        marker_a1b8dc56804d0f6410b4daa4064ca02b.bindPopup(popup_06b956f3453689e3e4bc52a55ad33cd9)
+        ;
+
+        
+    
+    
+            var marker_62d6941f8e190ac65ada047413d027c0 = L.marker(
+                [25.76256, -80.19125],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_1839192e7ae8478a4a3a380ed56c49e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_62d6941f8e190ac65ada047413d027c0.setIcon(icon_1839192e7ae8478a4a3a380ed56c49e6);
+        
+    
+        var popup_b3808a21208e3cc72a1eea94132c4579 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c73c12dd407b62dd8985f19b9818985d = $(`<div id="html_c73c12dd407b62dd8985f19b9818985d" style="width: 100.0%; height: 100.0%;">         Neighborhood: South Miami<br>         Number of Bookings: 32<br>         Availability: 334<br>         Average Daily Rate: $209.0<br>         Annual Revenue: $38001         </div>`)[0];
+                popup_b3808a21208e3cc72a1eea94132c4579.setContent(html_c73c12dd407b62dd8985f19b9818985d);
+            
+        
+
+        marker_62d6941f8e190ac65ada047413d027c0.bindPopup(popup_b3808a21208e3cc72a1eea94132c4579)
+        ;
+
+        
+    
+    
+            var marker_090605c61648f70e921094ed2b965e38 = L.marker(
+                [25.730097045454546, -80.23773477272726],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_b0c5bb9525c078d8e70d11382c615cfe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_090605c61648f70e921094ed2b965e38.setIcon(icon_b0c5bb9525c078d8e70d11382c615cfe);
+        
+    
+        var popup_50daef72298749875d92b8c615b01cbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab2fdd11a45ae53e5f6a79d0e4a23729 = $(`<div id="html_ab2fdd11a45ae53e5f6a79d0e4a23729" style="width: 100.0%; height: 100.0%;">         Neighborhood: Southwest Coconut Grove<br>         Number of Bookings: 698<br>         Availability: 3722<br>         Average Daily Rate: $198.5681818181818<br>         Annual Revenue: $467649         </div>`)[0];
+                popup_50daef72298749875d92b8c615b01cbb.setContent(html_ab2fdd11a45ae53e5f6a79d0e4a23729);
+            
+        
+
+        marker_090605c61648f70e921094ed2b965e38.bindPopup(popup_50daef72298749875d92b8c615b01cbb)
+        ;
+
+        
+    
+    
+            var marker_6e674c8270d96faef9783be040eb47b5 = L.marker(
+                [25.712806666666665, -80.25479444444444],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_9d7493f8df9205d52b7d7babff48b32a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6e674c8270d96faef9783be040eb47b5.setIcon(icon_9d7493f8df9205d52b7d7babff48b32a);
+        
+    
+        var popup_5dabd27b95319f2613acb98017512a70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8d12dc5fed19ca6a7e29c378c37e732 = $(`<div id="html_a8d12dc5fed19ca6a7e29c378c37e732" style="width: 100.0%; height: 100.0%;">         Neighborhood: Sunrise Harbor<br>         Number of Bookings: 198<br>         Availability: 1942<br>         Average Daily Rate: $556.4444444444445<br>         Annual Revenue: $343772         </div>`)[0];
+                popup_5dabd27b95319f2613acb98017512a70.setContent(html_a8d12dc5fed19ca6a7e29c378c37e732);
+            
+        
+
+        marker_6e674c8270d96faef9783be040eb47b5.bindPopup(popup_5dabd27b95319f2613acb98017512a70)
+        ;
+
+        
+    
+    
+            var marker_388d8b012a12c39955bd1813bf684821 = L.marker(
+                [25.803, -80.189],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_5d55fcdc4bc4fd94eba1ca144df1ac57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_388d8b012a12c39955bd1813bf684821.setIcon(icon_5d55fcdc4bc4fd94eba1ca144df1ac57);
+        
+    
+        var popup_ab7dc93e6e94bd1a2072bd5005b5ae40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ec5e93a742fa0b4c8bd35f64886672f = $(`<div id="html_8ec5e93a742fa0b4c8bd35f64886672f" style="width: 100.0%; height: 100.0%;">         Neighborhood: Sweetwater<br>         Number of Bookings: 6<br>         Availability: 121<br>         Average Daily Rate: $323.0<br>         Annual Revenue: $16413         </div>`)[0];
+                popup_ab7dc93e6e94bd1a2072bd5005b5ae40.setContent(html_8ec5e93a742fa0b4c8bd35f64886672f);
+            
+        
+
+        marker_388d8b012a12c39955bd1813bf684821.bindPopup(popup_ab7dc93e6e94bd1a2072bd5005b5ae40)
+        ;
+
+        
+    
+    
+            var marker_b5026a4c06465e164750fa32027057dd = L.marker(
+                [25.755523333333333, -80.20484761904761],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_735467528eafe75ec3e7421c5024e728 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b5026a4c06465e164750fa32027057dd.setIcon(icon_735467528eafe75ec3e7421c5024e728);
+        
+    
+        var popup_2f1b7997f79fd0cc90169ed57c097919 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fca331284d987775d4ffa7f4434b1c19 = $(`<div id="html_fca331284d987775d4ffa7f4434b1c19" style="width: 100.0%; height: 100.0%;">         Neighborhood: The Roads<br>         Number of Bookings: 697<br>         Availability: 5493<br>         Average Daily Rate: $235.5952380952381<br>         Annual Revenue: $1045041         </div>`)[0];
+                popup_2f1b7997f79fd0cc90169ed57c097919.setContent(html_fca331284d987775d4ffa7f4434b1c19);
+            
+        
+
+        marker_b5026a4c06465e164750fa32027057dd.bindPopup(popup_2f1b7997f79fd0cc90169ed57c097919)
+        ;
+
+        
+    
+    
+            var marker_adc5f1b36a051cae4d6870b846cd4643 = L.marker(
+                [25.763880927406493, -80.19515607129763],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_e2b69a66bb18bf18ea18b99f0af6bbc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_adc5f1b36a051cae4d6870b846cd4643.setIcon(icon_e2b69a66bb18bf18ea18b99f0af6bbc8);
+        
+    
+        var popup_a69fb37c2ac06b866eeec52a6c196586 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_446d45d4cbbb18a4161ba86e29854fea = $(`<div id="html_446d45d4cbbb18a4161ba86e29854fea" style="width: 100.0%; height: 100.0%;">         Neighborhood: Upper Brickell<br>         Number of Bookings: 395<br>         Availability: 3850<br>         Average Daily Rate: $265.0<br>         Annual Revenue: $649142         </div>`)[0];
+                popup_a69fb37c2ac06b866eeec52a6c196586.setContent(html_446d45d4cbbb18a4161ba86e29854fea);
+            
+        
+
+        marker_adc5f1b36a051cae4d6870b846cd4643.bindPopup(popup_a69fb37c2ac06b866eeec52a6c196586)
+        ;
+
+        
+    
+    
+            var marker_9500a0ffa8e74b04ae39354123f62993 = L.marker(
+                [25.76802141509434, -80.2606920754717],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_0830afbb5a532d4e07e7dee50d353f2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9500a0ffa8e74b04ae39354123f62993.setIcon(icon_0830afbb5a532d4e07e7dee50d353f2c);
+        
+    
+        var popup_d72439b80d5b5cc5d4c64d1fad440673 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_627b1f3ac16cda7823a7517e9719bc1b = $(`<div id="html_627b1f3ac16cda7823a7517e9719bc1b" style="width: 100.0%; height: 100.0%;">         Neighborhood: West Flagler<br>         Number of Bookings: 2875<br>         Availability: 20904<br>         Average Daily Rate: $149.16037735849056<br>         Annual Revenue: $2261442         </div>`)[0];
+                popup_d72439b80d5b5cc5d4c64d1fad440673.setContent(html_627b1f3ac16cda7823a7517e9719bc1b);
+            
+        
+
+        marker_9500a0ffa8e74b04ae39354123f62993.bindPopup(popup_d72439b80d5b5cc5d4c64d1fad440673)
+        ;
+
+        
+    
+    
+            var marker_3f254f6b3b58a5ca26d0afb304867e51 = L.marker(
+                [25.771036542056077, -80.23390869158878],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_10cf32567ba8377944b4c6b2a58ac569 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3f254f6b3b58a5ca26d0afb304867e51.setIcon(icon_10cf32567ba8377944b4c6b2a58ac569);
+        
+    
+        var popup_513d59b2ae7a99972fe81ce0a40f1cb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49da2ba928b69d795b317d4bf335daac = $(`<div id="html_49da2ba928b69d795b317d4bf335daac" style="width: 100.0%; height: 100.0%;">         Neighborhood: West Little Havana<br>         Number of Bookings: 3069<br>         Availability: 21768<br>         Average Daily Rate: $115.69158878504673<br>         Annual Revenue: $1853406         </div>`)[0];
+                popup_513d59b2ae7a99972fe81ce0a40f1cb5.setContent(html_49da2ba928b69d795b317d4bf335daac);
+            
+        
+
+        marker_3f254f6b3b58a5ca26d0afb304867e51.bindPopup(popup_513d59b2ae7a99972fe81ce0a40f1cb5)
+        ;
+
+        
+    
+    
+            var marker_f75a2ad0152601cf3afb51ae0ca214c6 = L.marker(
+                [25.765829583333332, -80.29321166666666],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_bf76feb6ba60f1c66ef1d9f34af0d9d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f75a2ad0152601cf3afb51ae0ca214c6.setIcon(icon_bf76feb6ba60f1c66ef1d9f34af0d9d2);
+        
+    
+        var popup_ae35306af32950e938dc0c8b010229c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9fb206ee4e9cc260939573a4aa230546 = $(`<div id="html_9fb206ee4e9cc260939573a4aa230546" style="width: 100.0%; height: 100.0%;">         Neighborhood: West Miami<br>         Number of Bookings: 937<br>         Availability: 5309<br>         Average Daily Rate: $138.33333333333334<br>         Annual Revenue: $684913         </div>`)[0];
+                popup_ae35306af32950e938dc0c8b010229c7.setContent(html_9fb206ee4e9cc260939573a4aa230546);
+            
+        
+
+        marker_f75a2ad0152601cf3afb51ae0ca214c6.bindPopup(popup_ae35306af32950e938dc0c8b010229c7)
+        ;
+
+        
+    
+    
+            var marker_bae273b73159f60c422c40654b3201a1 = L.marker(
+                [25.807081195037178, -80.20348588491728],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_ddc26881cdca2a24dee9ae5c34b45316 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bae273b73159f60c422c40654b3201a1.setIcon(icon_ddc26881cdca2a24dee9ae5c34b45316);
+        
+    
+        var popup_fd94565e1bbb532c32f325ea2d37ba12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bcf28446687187acba33842915afc304 = $(`<div id="html_bcf28446687187acba33842915afc304" style="width: 100.0%; height: 100.0%;">         Neighborhood: Wynwood<br>         Number of Bookings: 4220<br>         Availability: 27692<br>         Average Daily Rate: $180.125<br>         Annual Revenue: $3417246         </div>`)[0];
+                popup_fd94565e1bbb532c32f325ea2d37ba12.setContent(html_bcf28446687187acba33842915afc304);
+            
+        
+
+        marker_bae273b73159f60c422c40654b3201a1.bindPopup(popup_fd94565e1bbb532c32f325ea2d37ba12)
+        ;
+
+        
+    
+    
+            var marker_28d378d433b53169a9ee8f4d1ea59f04 = L.marker(
+                [25.805736678784317, -80.19557305498282],
+                {}
+            ).addTo(map_1cd2cdd01b73785f957291a1a7eddcf7);
+        
+    
+            var icon_a74821d5143590c241bc4d6b2b941cbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_28d378d433b53169a9ee8f4d1ea59f04.setIcon(icon_a74821d5143590c241bc4d6b2b941cbe);
+        
+    
+        var popup_ca74a5285053fb47dc3a5a8281a8ed11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_745efa95ddb67063b401d24ebf31354b = $(`<div id="html_745efa95ddb67063b401d24ebf31354b" style="width: 100.0%; height: 100.0%;">         Neighborhood: Wynwood Art District<br>         Number of Bookings: 1024<br>         Availability: 6978<br>         Average Daily Rate: $247.3111111111111<br>         Annual Revenue: $1015407         </div>`)[0];
+                popup_ca74a5285053fb47dc3a5a8281a8ed11.setContent(html_745efa95ddb67063b401d24ebf31354b);
+            
+        
+
+        marker_28d378d433b53169a9ee8f4d1ea59f04.bindPopup(popup_ca74a5285053fb47dc3a5a8281a8ed11)
+        ;
+
+        
+    
+</script>
+</html>
